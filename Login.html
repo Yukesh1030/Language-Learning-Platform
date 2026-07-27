@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STACKLY - Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-page">
+  <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+
+  <div class="auth-container">
+    <div class="auth-header">
+      <!-- Logo instead of text, as per branding -->
+      <img src="asstes/Brand-logo.webp" alt="STACKLY" style="height:40px; margin:0 auto 20px;" onerror="this.src='https://via.placeholder.com/150x50?text=STACKLY'">
+      <h2>Welcome Back</h2>
+      <p style="color:var(--text-light);">Sign in to continue your journey</p>
+    </div>
+
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="role">Login As</label>
+        <div class="input-icon left">
+          <i class="fa-solid fa-user-shield"></i>
+          <select id="role" class="form-control">
+            <option value="Client">Client</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <div class="input-icon left">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="email" id="email" class="form-control" placeholder="user@example.com">
+        </div>
+        <div class="error-msg"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-icon left right">
+          <i class="fa-solid fa-lock" style="left:20px; right:auto;"></i>
+          <input type="password" id="password" class="form-control" placeholder="••••••••">
+          <i class="fa-solid fa-eye-slash toggle-pwd" style="right:20px; left:auto; z-index:10;"></i>
+        </div>
+        <div class="error-msg"></div>
+      </div>
+
+      <a href="404.html" class="forgot-pwd">Forgot password?</a>
+
+      <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+
+    <div class="auth-footer">
+      <p>Don't have an account? <a href="Signup.html">Create an account</a></p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

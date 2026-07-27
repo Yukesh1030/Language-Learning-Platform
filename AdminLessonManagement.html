@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Management | Admin | STACKLY</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#FF7A00', secondary: '#FFFFFF', accent: '#2F2F2F' },
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex h-screen overflow-hidden">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="bg-accent text-white w-64 flex-shrink-0 flex flex-col transition-all duration-300 md:translate-x-0 -translate-x-full fixed md:relative z-40 h-full shadow-2xl">
+        <div class="p-6 flex items-center justify-between">
+            <a href="index.html" class="block"><img src="asstes/Brand-logo.webp" alt="STACKLY" class="h-8" onerror="this.src='https://via.placeholder.com/100x30?text=STACKLY'"></a>
+            <button id="close-sidebar" class="md:hidden text-white hover:text-primary transition"><i class="fas fa-times text-xl"></i></button>
+        </div>
+        <div class="px-6 py-4 border-b border-white/10">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl shadow-lg border-2 border-white/20">AD</div>
+                <div><h3 class="font-bold text-sm tracking-wide">System Admin</h3><p class="text-xs text-gray-300">admin@stackly.com</p></div>
+            </div>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4 custom-scrollbar">
+            <div class="mb-1"><a href="AdminDashboard.html" class="w-full px-6 py-3 flex items-center gap-4 text-left text-gray-300 hover:bg-white/5 hover:text-white transition-colors focus:outline-none"><i class="fas fa-th-large w-5 text-center"></i> Dashboard</a></div>
+            <div class="mb-1"><a href="AdminCourseManagement.html" class="w-full px-6 py-3 flex items-center gap-4 text-left text-gray-300 hover:bg-white/5 hover:text-white transition-colors focus:outline-none"><i class="fas fa-book w-5 text-center"></i> Course Management</a></div>
+            <div class="mb-1"><a href="AdminStudentManagement.html" class="w-full px-6 py-3 flex items-center gap-4 text-left text-gray-300 hover:bg-white/5 hover:text-white transition-colors focus:outline-none"><i class="fas fa-users w-5 text-center"></i> Student Management</a></div>
+            <div class="mb-1"><a href="AdminLessonManagement.html" class="w-full px-6 py-3 flex items-center gap-4 text-left bg-white/10 border-l-4 border-primary font-semibold focus:outline-none"><i class="fas fa-clipboard-question w-5 text-center text-primary"></i> Lesson & Quiz</a></div>
+            <div class="mb-1"><a href="AdminAnalytics.html" class="w-full px-6 py-3 flex items-center gap-4 text-left text-gray-300 hover:bg-white/5 hover:text-white transition-colors focus:outline-none"><i class="fas fa-chart-line w-5 text-center"></i> Analytics</a></div>
+            <div class="mb-1"><a href="AdminSettings.html" class="w-full px-6 py-3 flex items-center gap-4 text-left text-gray-300 hover:bg-white/5 hover:text-white transition-colors focus:outline-none"><i class="fas fa-cog w-5 text-center"></i> Settings</a></div>
+        </nav>
+        <div class="p-6 border-t border-white/10"><a href="Login.html" class="w-full flex items-center gap-3 text-red-400 hover:text-red-300 transition-colors font-semibold"><i class="fas fa-sign-out-alt"></i> Logout System</a></div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden relative">
+        <header class="bg-white h-20 px-8 flex items-center justify-between shadow-sm z-30">
+            <div class="flex items-center gap-4">
+                <button id="open-sidebar" class="md:hidden text-gray-500 hover:text-primary transition"><i class="fas fa-bars text-2xl"></i></button>
+                <h1 class="text-xl font-bold text-accent hidden sm:block">Lesson & Quiz Management</h1>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="relative text-gray-500 hover:text-primary transition"><i class="fas fa-bell text-xl"></i></button>
+            </div>
+        </header>
+
+        <div class="flex-1 overflow-y-auto p-6 md:p-8 bg-gray-50">
+            <div class="mb-8 flex justify-between items-end flex-wrap gap-4">
+                <div><h2 class="text-2xl font-bold text-gray-900">Manage Quizzes</h2></div>
+                <button class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-semibold shadow-md flex items-center gap-2"><i class="fas fa-plus"></i> Create Quiz</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Quiz Card -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Basic Greetings Quiz</h3>
+                        <p class="text-sm text-gray-500">Course: Spanish for Beginners</p>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xs font-bold text-gray-400">10 Questions</span>
+                        <button class="text-primary text-sm font-semibold">Edit <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Business Idioms</h3>
+                        <p class="text-sm text-gray-500">Course: Business English</p>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xs font-bold text-gray-400">15 Questions</span>
+                        <button class="text-primary text-sm font-semibold">Edit <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('open-sidebar');
+        const closeBtn = document.getElementById('close-sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        function toggleSidebar() {
+            if(sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.remove('-translate-x-full'); overlay.classList.remove('hidden');
+            } else {
+                sidebar.classList.add('-translate-x-full'); overlay.classList.add('hidden');
+            }
+        }
+        openBtn.addEventListener('click', toggleSidebar);
+        closeBtn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+    </script>
+    <script src="js/dashboard-profile.js"></script>
+</body>
+</html>

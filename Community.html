@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STACKLY - Community</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { padding: 160px 20px 80px !important; text-align: center !important; position: relative; }
+    .page-hero::before { background-image: url('asstes/Group_discussions.webp') !important; }
+    .page-hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+    
+    .forum-list { margin-top: 40px; }
+    .forum-item { background: var(--secondary); padding: 25px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: space-between; transition: var(--transition); border: 1px solid transparent; }
+    .forum-item:hover { border-color: var(--primary); transform: translateX(10px); }
+    .forum-info { display: flex; align-items: center; gap: 20px; }
+    .forum-icon { width: 60px; height: 60px; border-radius: 10px; background: rgba(255,122,0,0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+    
+    .exchange-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 30px; align-items: stretch; }
+    .exchange-card { background: var(--secondary); padding: 35px 30px; border-radius: 20px; text-align: center; border: 1px solid #eee; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: var(--transition); }
+    .exchange-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); border-color: var(--primary); }
+    .exchange-img { width: 180px; height: 180px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); flex-shrink: 0; background: #eee; }
+    .exchange-img img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; transition: transform 0.5s ease; }
+    .exchange-card:hover .exchange-img img { transform: scale(1.08); }
+    
+    .leaderboard { background: var(--secondary); border-radius: 20px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+    .lb-row { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #eee; }
+    .lb-row:last-child { border-bottom: none; }
+    .lb-rank { font-weight: bold; width: 30px; }
+    .lb-user { flex: 1; display: flex; align-items: center; gap: 15px; }
+    .lb-avatar { width: 40px; height: 40px; border-radius: 50%; background: #ccc; }
+    
+    .event-card { background: var(--secondary); display: flex; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-bottom: 20px; }
+    .event-date { background: var(--primary); color: #fff; padding: 20px; text-align: center; min-width: 100px; display: flex; flex-direction: column; justify-content: center; }
+    .event-date span { font-size: 2rem; font-weight: bold; line-height: 1; }
+    .event-content { padding: 20px; flex: 1; }
+    
+    .cta-banner { background: var(--accent); color: var(--secondary); padding: 80px 20px; text-align: center; border-radius: 20px; margin: 50px 0; }
+    @media (max-width: 480px) {
+      .event-card { flex-direction: column; }
+      .event-date { min-width: 100%; padding: 15px; }
+      .forum-item { flex-direction: column; align-items: flex-start; gap: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader"><div class="loader-inner"></div></div>
+
+  <nav class="navbar">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <a href="index.html" class="nav-brand">
+        <img src="asstes/Brand-logo.webp" alt="STACKLY Logo" onerror="this.src='https://via.placeholder.com/150x50?text=STACKLY'">
+      </a>
+      <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="LearningPath.html">Learning Path</a></li>
+        <li><a href="Community.html" style="color: var(--primary)">Community</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li class="mobile-login"><a href="Login.html" class="btn btn-primary" style="display:inline-block; padding:8px 25px;">Login</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="Login.html" class="btn btn-primary">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 data-aos="fade-down">Learn Together</h1>
+      <p data-aos="fade-up" data-aos-delay="200" style="color:var(--text-light); max-width:600px; margin:0 auto;">Join a global community of language learners. Share tips, practice speaking, and make friends worldwide.</p>
+    </div>
+  </section>
+
+  <!-- 2. Discussion Forums -->
+  <section>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Discussion Forums</h2>
+        <p>Ask questions and share your knowledge</p>
+      </div>
+      <div class="forum-list">
+        <div class="forum-item" data-aos="slide-up" data-aos-delay="100">
+          <div class="forum-info">
+            <div class="forum-icon"><i class="fa-solid fa-book"></i></div>
+            <div>
+              <h4 style="margin-bottom:5px;">Grammar & Vocabulary Tips</h4>
+              <p style="color:var(--text-light); font-size:0.9rem;">Discuss tricky grammar rules and share vocab lists.</p>
+            </div>
+          </div>
+          <div style="color:var(--text-light); text-align:right;">
+            <p><i class="fa-regular fa-comment"></i> 1.2k</p>
+          </div>
+        </div>
+        <div class="forum-item" data-aos="slide-up" data-aos-delay="200">
+          <div class="forum-info">
+            <div class="forum-icon"><i class="fa-solid fa-plane"></i></div>
+            <div>
+              <h4 style="margin-bottom:5px;">Travel Experiences</h4>
+              <p style="color:var(--text-light); font-size:0.9rem;">Share stories about using your new language abroad.</p>
+            </div>
+          </div>
+          <div style="color:var(--text-light); text-align:right;">
+            <p><i class="fa-regular fa-comment"></i> 850</p>
+          </div>
+        </div>
+        <div class="forum-item" data-aos="slide-up" data-aos-delay="300">
+          <div class="forum-info">
+            <div class="forum-icon"><i class="fa-solid fa-headphones"></i></div>
+            <div>
+              <h4 style="margin-bottom:5px;">Media Recommendations</h4>
+              <p style="color:var(--text-light); font-size:0.9rem;">Suggest movies, podcasts, and books for learners.</p>
+            </div>
+          </div>
+          <div style="color:var(--text-light); text-align:right;">
+            <p><i class="fa-regular fa-comment"></i> 2.4k</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Language Exchange -->
+  <section style="background: var(--bg-color);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Language Exchange Partners</h2>
+      </div>
+      <div class="exchange-grid">
+        <div class="exchange-card" data-aos="zoom-in" data-aos-delay="100">
+          <div style="width: 100%;">
+            <div class="exchange-img"><img src="asstes/Gorup_discussions.webp" alt="Alex M."></div>
+            <h4 style="font-size: 1.25rem; margin-bottom: 5px;">Alex M.</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; margin-bottom:25px;">Native: English | Learning: Spanish</p>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-outline" style="padding:10px 25px; font-size:0.95rem; width: 80%; max-width: 180px; border-radius: 50px;">Connect</button>
+        </div>
+        <div class="exchange-card" data-aos="zoom-in" data-aos-delay="200">
+          <div style="width: 100%;">
+            <div class="exchange-img"><img src="asstes/Live_classes.webp" alt="Yuki T."></div>
+            <h4 style="font-size: 1.25rem; margin-bottom: 5px;">Yuki T.</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; margin-bottom:25px;">Native: Japanese | Learning: English</p>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-outline" style="padding:10px 25px; font-size:0.95rem; width: 80%; max-width: 180px; border-radius: 50px;">Connect</button>
+        </div>
+        <div class="exchange-card" data-aos="zoom-in" data-aos-delay="300">
+          <div style="width: 100%;">
+            <div class="exchange-img"><img src="asstes/French_language_class.webp" alt="Carlos R."></div>
+            <h4 style="font-size: 1.25rem; margin-bottom: 5px;">Carlos R.</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; margin-bottom:25px;">Native: Spanish | Learning: French</p>
+          </div>
+          <button onclick="window.location.href='404.html'" class="btn btn-outline" style="padding:10px 25px; font-size:0.95rem; width: 80%; max-width: 180px; border-radius: 50px;">Connect</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Student Leaderboard -->
+  <section>
+    <div class="container" style="max-width: 800px;">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Global Leaderboard</h2>
+        <p>Top learners this week</p>
+      </div>
+      <div class="leaderboard" data-aos="fade-up">
+        <div class="lb-row">
+          <div class="lb-rank" style="color: #FFB800;"><i class="fa-solid fa-crown"></i> 1</div>
+          <div class="lb-user">
+            <img src="asstes/profile-sarah-k.webp" alt="Sarah K." class="lb-avatar" style="object-fit:cover;">
+            <strong>Sarah K.</strong>
+          </div>
+          <div style="font-weight:bold; color:var(--primary);">12,450 XP</div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-rank" style="color: #C0C0C0;">2</div>
+          <div class="lb-user">
+            <img src="asstes/profile-michael.webp" alt="Michael B." class="lb-avatar" style="object-fit:cover;">
+            <strong>Michael B.</strong>
+          </div>
+          <div style="font-weight:bold; color:var(--primary);">11,200 XP</div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-rank" style="color: #CD7F32;">3</div>
+          <div class="lb-user">
+            <img src="asstes/profile-elena.webp" alt="Elena G." class="lb-avatar" style="object-fit:cover;">
+            <strong>Elena G.</strong>
+          </div>
+          <div style="font-weight:bold; color:var(--primary);">10,850 XP</div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-rank">4</div>
+          <div class="lb-user">
+            <img src="asstes/profile-david-p.webp" alt="David P." class="lb-avatar" style="object-fit:cover;">
+            <strong>David P.</strong>
+          </div>
+          <div style="font-weight:bold; color:var(--primary);">9,400 XP</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Weekly Events -->
+  <section style="background: var(--bg-color);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Weekly Events</h2>
+      </div>
+      <div style="max-width:800px; margin:0 auto;">
+        <div class="event-card" data-aos="fade-right">
+          <div class="event-date">
+            <span>24</span>
+            <small>OCT</small>
+          </div>
+          <div class="event-content">
+            <h3 style="margin-bottom:5px;">Spanish Speaking Mixer</h3>
+            <p style="color:var(--text-light); margin-bottom:15px;"><i class="fa-regular fa-clock"></i> 18:00 UTC | Virtual</p>
+            <button onclick="window.location.href='404.html'" class="btn btn-outline" style="padding:5px 15px; font-size:0.8rem;">RSVP</button>
+          </div>
+        </div>
+        <div class="event-card" data-aos="fade-left">
+          <div class="event-date">
+            <span>26</span>
+            <small>OCT</small>
+          </div>
+          <div class="event-content">
+            <h3 style="margin-bottom:5px;">Japanese Culture & Kanji</h3>
+            <p style="color:var(--text-light); margin-bottom:15px;"><i class="fa-regular fa-clock"></i> 20:00 UTC | Virtual</p>
+            <button onclick="window.location.href='404.html'" class="btn btn-outline" style="padding:5px 15px; font-size:0.8rem;">RSVP</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Success Stories (Reused basic structure from index but adapted) -->
+  <section>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Success Stories</h2>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+        <div style="max-width:400px; background:var(--secondary); padding:30px; border-radius:20px; box-shadow:0 5px 15px rgba(0,0,0,0.05);" data-aos="zoom-in">
+          <p>"Finding a language partner on STACKLY changed everything. Practicing with a native speaker gave me the confidence I lacked."</p>
+          <div style="display:flex; align-items:center; gap:15px; margin-top:20px;">
+            <img src="asstes/profile-james.webp" alt="James R." style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+            <strong>- James R.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Mentor Program -->
+  <section style="background: var(--bg-color);">
+    <div class="container" style="text-align:center;">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Become a Mentor</h2>
+        <p>Give back to the community and earn rewards</p>
+      </div>
+      <div style="display:inline-block; max-width:600px; text-align:left;" data-aos="fade-up">
+        <p style="color:var(--text-light); margin-bottom:20px;">Are you fluent in multiple languages? Join our mentor program to help beginners navigate their learning journey and earn free premium months and exclusive badges.</p>
+        <button onclick="window.location.href='404.html'" class="btn btn-outline">Apply Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CTA -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-banner" data-aos="zoom-in">
+        <h2 style="color: var(--secondary);">Join our thriving community</h2>
+        <a href="404.html" class="btn btn-primary" style="margin-top:20px;">Create an Account</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col footer-logo">
+          <img src="asstes/Brand-logo.webp" alt="STACKLY Logo" onerror="this.src='https://via.placeholder.com/150x50?text=STACKLY'">
+          <p>Master languages smarter, faster, and better through AI-powered interactive learning.</p>
+          <div class="social-links">
+            <a href="404.html"><img src="asstes/footer-socialmedia-icon--facebook.webp" alt="Facebook" style="width:20px; height:20px; object-fit:contain;"></a>
+            <a href="404.html"><img src="asstes/footer-socialmedia-icon-twitter.webp" alt="Twitter" style="width:20px; height:20px; object-fit:contain;"></a>
+            <a href="404.html"><img src="asstes/footer-socialmedia-icon-instagram.webp" alt="Instagram" style="width:20px; height:20px; object-fit:contain;"></a>
+            <a href="404.html"><img src="asstes/footer-socialmedia-icon-linkedin.webp" alt="LinkedIn" style="width:20px; height:20px; object-fit:contain;"></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a href="LearningPath.html">Learning Path</a></li>
+            <li><a href="Community.html">Community</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="404.html">Help Center</a></li>
+            <li><a href="404.html">Terms of Service</a></li>
+            <li><a href="404.html">Privacy Policy</a></li>
+            <li><a href="404.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Languages</h3>
+          <ul>
+            <li><a href="404.html">Learn English</a></li>
+            <li><a href="404.html">Learn Spanish</a></li>
+            <li><a href="404.html">Learn French</a></li>
+            <li><a href="404.html">Learn Japanese</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STACKLY. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

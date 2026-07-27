@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STACKLY - Contact</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { padding: 160px 20px 80px !important; text-align: center !important; position: relative; }
+    .page-hero::before { background-image: url('asstes/Live_classes.webp') !important; }
+    .page-hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+    
+    .contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 50px; }
+    .contact-card { background: var(--secondary); padding: 40px 30px; border-radius: 20px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: var(--transition); border: 1px solid transparent; }
+    .contact-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+    .contact-card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+    
+    .contact-split { display: flex; flex-wrap: wrap; gap: 50px; }
+    .contact-form-container { flex: 1; min-width: min(280px, 100%); background: var(--secondary); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #eee; }
+    .contact-info-container { flex: 1; min-width: min(280px, 100%); }
+    
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+    .form-control { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 10px; font-family: 'Poppins', sans-serif; transition: var(--transition); background: #f9f9f9; }
+    .form-control:focus { border-color: var(--primary); outline: none; background: #fff; }
+    .error-msg { color: #ff3333; font-size: 0.85rem; margin-top: 5px; display: none; }
+    .has-error .error-msg { display: block; }
+    .has-error .form-control { border-color: #ff3333; }
+    
+    .location-card { background: var(--secondary); padding: 30px; border-radius: 15px; margin-bottom: 20px; border-left: 4px solid var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+    
+    .newsletter-section { background: var(--accent); color: var(--secondary); padding: 80px 0; text-align: center; }
+    .newsletter-form { max-width: 500px; margin: 30px auto 0; display: flex; gap: 10px; }
+    .newsletter-form input { flex: 1; padding: 15px; border-radius: 30px; border: none; outline: none; padding-left: 20px; }
+    
+    .cta-banner { background: linear-gradient(135deg, var(--primary), #FF9900); color: var(--secondary); padding: 80px 20px; text-align: center; border-radius: 20px; margin: 50px 0; }
+    @media (max-width: 480px) {
+      .newsletter-form { flex-direction: column; }
+      .contact-form-container { padding: 25px 15px !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader"><div class="loader-inner"></div></div>
+
+  <nav class="navbar">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <a href="index.html" class="nav-brand">
+        <img src="asstes/Brand-logo.webp" alt="STACKLY Logo" onerror="this.src='https://via.placeholder.com/150x50?text=STACKLY'">
+      </a>
+      <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="LearningPath.html">Learning Path</a></li>
+        <li><a href="Community.html">Community</a></li>
+        <li><a href="Contact.html" style="color: var(--primary)">Contact</a></li>
+        <li class="mobile-login"><a href="Login.html" class="btn btn-primary" style="display:inline-block; padding:8px 25px;">Login</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="Login.html" class="btn btn-primary">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 data-aos="fade-down">Contact STACKLY</h1>
+      <p data-aos="fade-up" data-aos-delay="200" style="color:var(--text-light); max-width:600px; margin:0 auto;">We'd love to hear from you. Get in touch with our support team or visit our offices.</p>
+    </div>
+  </section>
+
+  <!-- 2. Contact Cards -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="contact-cards">
+        <div class="contact-card" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fa-regular fa-envelope"></i>
+          <h3>Email Us</h3>
+          <p style="color:var(--text-light); margin-top:10px;">support@stackly.com</p>
+        </div>
+        <div class="contact-card" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fa-solid fa-phone"></i>
+          <h3>Call Us</h3>
+          <p style="color:var(--text-light); margin-top:10px;">+1 (555) 123-4567</p>
+        </div>
+        <div class="contact-card" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fa-regular fa-comments"></i>
+          <h3>Live Chat</h3>
+          <p style="color:var(--text-light); margin-top:10px;">Available 24/7</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Contact Form & 4. Office Locations -->
+  <section style="background: var(--bg-color);">
+    <div class="container contact-split">
+      <!-- Contact Form -->
+      <div class="contact-form-container" data-aos="fade-right">
+        <h2 style="margin-bottom:20px;">Send a Message</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="c_name" class="form-control" placeholder="John Doe">
+            <div class="error-msg">Name is required</div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="c_email" class="form-control" placeholder="john@example.com">
+            <div class="error-msg">Valid email is required</div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" id="c_subject" class="form-control" placeholder="How can we help?">
+            <div class="error-msg">Subject is required</div>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea id="c_message" class="form-control" rows="5" placeholder="Your message here..."></textarea>
+            <div class="error-msg">Message cannot be empty</div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+        </form>
+      </div>
+      
+      <!-- Office Locations -->
+      <div class="contact-info-container" data-aos="fade-left">
+        <h2 style="margin-bottom:20px;">Our Offices</h2>
+        <div class="location-card">
+          <h4>New York (HQ)</h4>
+          <p style="color:var(--text-light); margin-top:10px;"><i class="fa-solid fa-location-dot" style="color:var(--primary);"></i> 123 Learning Blvd, Tech District, NY 10001</p>
+        </div>
+        <div class="location-card">
+          <h4>London</h4>
+          <p style="color:var(--text-light); margin-top:10px;"><i class="fa-solid fa-location-dot" style="color:var(--primary);"></i> 45 Language Lane, Innovation Park, LDN</p>
+        </div>
+        <div class="location-card">
+          <h4>Tokyo</h4>
+          <p style="color:var(--text-light); margin-top:10px;"><i class="fa-solid fa-location-dot" style="color:var(--primary);"></i> 89 Sakura Street, Shibuya, TKY</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FAQs -->
+  <section>
+    <div class="container" style="text-align:center;">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Got Questions?</h2>
+        <p>Check our detailed FAQ section for quick answers.</p>
+      </div>
+      <a href="404.html" class="btn btn-outline" data-aos="zoom-in">Visit Help Center</a>
+    </div>
+  </section>
+
+  <!-- 6. Newsletter -->
+  <section class="newsletter-section">
+    <div class="container" data-aos="fade-up">
+      <h2>Subscribe to our Newsletter</h2>
+      <p style="color:#ccc; margin-top:10px;">Get language learning tips and special offers directly to your inbox.</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); const email = this.querySelector('input').value.trim(); if(!email || !/^\S+@\S+\.\S+$/.test(email)) { alert('Please enter a valid email address.'); } else { alert('Subscribed!'); window.location.href = '404.html'; }">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-primary" style="padding: 0 30px;">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 7. Social Media -->
+  <section>
+    <div class="container" style="text-align:center;">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Connect With Us</h2>
+      </div>
+      <div style="display:flex; justify-content:center; gap:20px; font-size:2rem;" data-aos="fade-up">
+        <a href="404.html" style="color:var(--accent); transition:var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--accent)'"><i class="fa-brands fa-twitter"></i></a>
+        <a href="404.html" style="color:var(--accent); transition:var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--accent)'"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="404.html" style="color:var(--accent); transition:var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--accent)'"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CTA -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-banner" data-aos="zoom-in">
+        <h2>Start your language journey today.</h2>
+        <a href="404.html" class="btn btn-primary" style="background:#fff; color:var(--primary); margin-top:20px;">Join Free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col footer-logo">
+          <img src="asstes/Brand-logo.webp" alt="STACKLY Logo" onerror="this.src='https://via.placeholder.com/150x50?text=STACKLY'">
+          <p>Master languages smarter, faster, and better through AI-powered interactive learning.</p>
+          <div class="social-links">
+            <a href="404.html"><img src="asstes/footer-socialmedia-icon--facebook.webp" alt="Facebook" style="width:20px; height:20px; object-fit:contain;"></a>
+            <a href="404.html"><img src="asstes/footer-socialmedia-icon-twitter.webp" alt="Twitter" style="width:20px; height:20px; object-fit:contain;"></a>
+            <a href="404.html"><img src="asstes/footer-socialmedia-icon-instagram.webp" alt="Instagram" style="width:20px; height:20px; object-fit:contain;"></a>
+            <a href="404.html"><img src="asstes/footer-socialmedia-icon-linkedin.webp" alt="LinkedIn" style="width:20px; height:20px; object-fit:contain;"></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a href="LearningPath.html">Learning Path</a></li>
+            <li><a href="Community.html">Community</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="404.html">Help Center</a></li>
+            <li><a href="404.html">Terms of Service</a></li>
+            <li><a href="404.html">Privacy Policy</a></li>
+            <li><a href="404.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Languages</h3>
+          <ul>
+            <li><a href="404.html">Learn English</a></li>
+            <li><a href="404.html">Learn Spanish</a></li>
+            <li><a href="404.html">Learn French</a></li>
+            <li><a href="404.html">Learn Japanese</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STACKLY. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Contact Form Validation
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          let isValid = true;
+          
+          const name = document.getElementById('c_name');
+          const email = document.getElementById('c_email');
+          const subject = document.getElementById('c_subject');
+          const message = document.getElementById('c_message');
+          
+          if (!name.value.trim()) { setError(name); isValid = false; } else clearError(name);
+          if (!email.value || !/^\S+@\S+\.\S+$/.test(email.value)) { setError(email); isValid = false; } else clearError(email);
+          if (!subject.value.trim()) { setError(subject); isValid = false; } else clearError(subject);
+          if (!message.value.trim()) { setError(message); isValid = false; } else clearError(message);
+          
+          if (isValid) {
+            alert('Message sent successfully!');
+            window.location.href = '404.html';
+          }
+        });
+      }
+      
+      function setError(el) { el.parentElement.classList.add('has-error'); }
+      function clearError(el) { el.parentElement.classList.remove('has-error'); }
+    });
+  </script>
+</body>
+</html>

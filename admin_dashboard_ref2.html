@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | STACKLY</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#272a52',
+                        secondary: '#FFFFFF',
+                        accent: '#0ca7b8',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex h-screen overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="bg-primary text-white w-64 flex-shrink-0 flex flex-col transition-all duration-300 md:translate-x-0 -translate-x-full fixed md:relative z-40 h-full shadow-2xl">
+        <div class="p-6 flex items-center justify-between">
+            <a href="index.html" class="block">
+                <img src="asstes/Brand-logo.webp" alt="STACKLY" class="h-8">
+            </a>
+            <button id="close-sidebar" class="md:hidden text-white hover:text-accent transition"><i class="fas fa-times text-xl"></i></button>
+        </div>
+        
+        <div class="px-6 py-4 border-b border-white/10">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-xl shadow-lg border-2 border-white/20">
+                    SA
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm tracking-wide">System Admin</h3>
+                    <p class="text-xs text-gray-300">admin@stackly.com</p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="flex-1 overflow-y-auto py-4 custom-scrollbar">
+            <div class="mb-1">
+                <a href="AdminDashboard.html" class="w-full px-6 py-3 flex items-center gap-4 text-left bg-white/10 border-l-4 border-accent font-semibold focus:outline-none">
+                    <i class="fas fa-th-large w-5 text-center text-accent"></i> Dashboard
+                </a>
+            </div>
+            <div class="mb-1">
+                <a href="AdminDefenseAssets.html" class="w-full px-6 py-3 flex items-center gap-4 text-left text-gray-300 hover:bg-white/5 hover:text-white transition-colors focus:outline-none">
+                    <i class="fas fa-shield-alt w-5 text-center"></i> Defense Assets
+                </a>
+            </div>
+            <div class="mb-1">
+                <a href="AdminIntelReports.html" class="w-full px-6 py-3 flex items-center gap-4 text-left text-gray-300 hover:bg-white/5 hover:text-white transition-colors focus:outline-none">
+                    <i class="fas fa-file-alt w-5 text-center"></i> Intel Reports
+                </a>
+            </div>
+            <div class="mb-1">
+                <a href="AdminPersonnel.html" class="w-full px-6 py-3 flex items-center gap-4 text-left text-gray-300 hover:bg-white/5 hover:text-white transition-colors focus:outline-none">
+                    <i class="fas fa-users w-5 text-center"></i> Personnel
+                </a>
+            </div>
+            <div class="mb-1">
+                <a href="AdminSettings.html" class="w-full px-6 py-3 flex items-center gap-4 text-left text-gray-300 hover:bg-white/5 hover:text-white transition-colors focus:outline-none">
+                    <i class="fas fa-cog w-5 text-center"></i> Settings
+                </a>
+            </div>
+        </nav>
+        
+        <div class="p-6 border-t border-white/10">
+            <a href="Login.html" class="w-full flex items-center gap-3 text-red-400 hover:text-red-300 transition-colors font-semibold">
+                <i class="fas fa-sign-out-alt"></i> Logout System
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden relative">
+        <!-- Header -->
+        <header class="bg-white h-20 px-8 flex items-center justify-between shadow-sm z-30">
+            <div class="flex items-center gap-4">
+                <button id="open-sidebar" class="md:hidden text-gray-500 hover:text-accent transition">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <h1 class="text-xl font-bold text-primary hidden sm:block">Command Center</h1>
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <!-- Search -->
+                <div class="relative hidden md:block">
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" placeholder="Search operations..." class="pl-10 pr-4 py-2 bg-gray-100 border-none rounded-full focus:outline-none focus:ring-2 focus:ring-accent text-sm w-64 transition-all">
+                </div>
+                <!-- Notifications -->
+                <button class="relative text-gray-500 hover:text-accent transition">
+                    <i class="fas fa-bell text-xl"></i>
+                    <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white text-[9px] font-bold text-white flex items-center justify-center">3</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto p-6 md:p-8 bg-gray-50">
+            
+            <div class="mb-8 flex justify-between items-end flex-wrap gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900">System Overview</h2>
+                    <p class="text-gray-500 text-sm mt-1">Real-time status of critical infrastructure</p>
+                </div>
+                <button class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition shadow-md flex items-center gap-2">
+                    <i class="fas fa-download"></i> Generate Report
+                </button>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-5 hover:shadow-md transition">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center text-2xl flex-shrink-0">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 font-medium">Active Nodes</p>
+                        <h4 class="text-2xl font-bold text-gray-900">1,248</h4>
+                        <p class="text-xs text-green-500 font-semibold mt-1"><i class="fas fa-arrow-up"></i> 12% increase</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-5 hover:shadow-md transition">
+                    <div class="w-14 h-14 rounded-full bg-accent/10 text-accent flex items-center justify-center text-2xl flex-shrink-0">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 font-medium">Security Alerts</p>
+                        <h4 class="text-2xl font-bold text-gray-900">0</h4>
+                        <p class="text-xs text-green-500 font-semibold mt-1"><i class="fas fa-check-circle"></i> Systems secure</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-5 hover:shadow-md transition">
+                    <div class="w-14 h-14 rounded-full bg-purple-50 text-purple-500 flex items-center justify-center text-2xl flex-shrink-0">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 font-medium">Active Personnel</p>
+                        <h4 class="text-2xl font-bold text-gray-900">342</h4>
+                        <p class="text-xs text-gray-400 mt-1">Across 12 facilities</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-5 hover:shadow-md transition">
+                    <div class="w-14 h-14 rounded-full bg-red-50 text-red-500 flex items-center justify-center text-2xl flex-shrink-0">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 font-medium">Critical Issues</p>
+                        <h4 class="text-2xl font-bold text-gray-900">2</h4>
+                        <p class="text-xs text-red-500 font-semibold mt-1">Requires attention</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Dashboard Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Activity Table -->
+                <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-6 overflow-hidden">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-bold text-lg text-gray-900">Recent Network Activity</h3>
+                        <a href="#" class="text-sm text-accent hover:underline font-semibold">View All</a>
+                    </div>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-gray-100">
+                                    <th class="pb-3 text-sm font-semibold text-gray-500">Operation ID</th>
+                                    <th class="pb-3 text-sm font-semibold text-gray-500">Location</th>
+                                    <th class="pb-3 text-sm font-semibold text-gray-500">Timestamp</th>
+                                    <th class="pb-3 text-sm font-semibold text-gray-500">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-50 hover:bg-gray-50 transition cursor-pointer">
+                                    <td class="py-4 text-sm font-semibold text-gray-900">OP-7829</td>
+                                    <td class="py-4 text-sm text-gray-600">Sector Alpha-4</td>
+                                    <td class="py-4 text-sm text-gray-500">10 mins ago</td>
+                                    <td class="py-4"><span class="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700">Completed</span></td>
+                                </tr>
+                                <tr class="border-b border-gray-50 hover:bg-gray-50 transition cursor-pointer">
+                                    <td class="py-4 text-sm font-semibold text-gray-900">OP-7830</td>
+                                    <td class="py-4 text-sm text-gray-600">Sector Beta-9</td>
+                                    <td class="py-4 text-sm text-gray-500">1 hour ago</td>
+                                    <td class="py-4"><span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-700">In Progress</span></td>
+                                </tr>
+                                <tr class="border-b border-gray-50 hover:bg-gray-50 transition cursor-pointer">
+                                    <td class="py-4 text-sm font-semibold text-gray-900">OP-7831</td>
+                                    <td class="py-4 text-sm text-gray-600">Command Center</td>
+                                    <td class="py-4 text-sm text-gray-500">3 hours ago</td>
+                                    <td class="py-4"><span class="px-3 py-1 rounded-full text-xs font-bold bg-yellow-100 text-yellow-700">Pending</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition cursor-pointer">
+                                    <td class="py-4 text-sm font-semibold text-gray-900">OP-7832</td>
+                                    <td class="py-4 text-sm text-gray-600">Offsite Storage</td>
+                                    <td class="py-4 text-sm text-gray-500">5 hours ago</td>
+                                    <td class="py-4"><span class="px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700">Failed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Right Column Widgets -->
+                <div class="space-y-8">
+                    <!-- Quick Actions -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+                        <h3 class="font-bold text-lg text-gray-900 mb-4">Quick Actions</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button class="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl hover:bg-accent hover:text-white transition group border border-gray-100">
+                                <i class="fas fa-plus text-xl text-accent group-hover:text-white mb-2 transition"></i>
+                                <span class="text-sm font-semibold">New Protocol</span>
+                            </button>
+                            <button class="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl hover:bg-primary hover:text-white transition group border border-gray-100">
+                                <i class="fas fa-file-export text-xl text-primary group-hover:text-white mb-2 transition"></i>
+                                <span class="text-sm font-semibold">Export Log</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- System Health -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+                        <h3 class="font-bold text-lg text-gray-900 mb-4">System Health</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-semibold text-gray-700">Server Capacity</span>
+                                    <span class="text-gray-500">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-semibold text-gray-700">Network Bandwidth</span>
+                                    <span class="text-gray-500">42%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-blue-500 h-2 rounded-full" style="width: 42%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW SECTIONS (Phase 3) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+                <!-- Global Threat Map -->
+                <div class="bg-gray-900 rounded-2xl shadow-lg border border-gray-800 p-6 overflow-hidden relative group">
+                    <div class="absolute inset-0 bg-[url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')] bg-no-repeat bg-center bg-contain opacity-20 group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="font-bold text-lg text-white">Global Threat Map</h3>
+                            <span class="px-3 py-1 bg-red-500/20 text-red-500 text-xs font-bold rounded-full border border-red-500/50 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Live
+                            </span>
+                        </div>
+                        
+                        <div class="h-48 relative">
+                            <!-- Threat Nodes -->
+                            <div class="absolute top-1/4 left-1/3 group-hover:scale-125 transition-transform">
+                                <div class="w-4 h-4 bg-red-500 rounded-full animate-ping absolute opacity-75"></div>
+                                <div class="w-4 h-4 bg-red-500 rounded-full relative z-10 border-2 border-white"></div>
+                            </div>
+                            <div class="absolute top-1/2 right-1/3 group-hover:scale-125 transition-transform">
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full animate-ping absolute opacity-75" style="animation-duration: 2s;"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full relative z-10 border-2 border-white"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Critical Alerts -->
+                <div class="bg-white rounded-2xl shadow-sm border border-red-200 p-6 flex flex-col">
+                    <h3 class="font-bold text-lg text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-exclamation-triangle text-red-500"></i> Priority Alerts
+                    </h3>
+                    
+                    <div class="flex-1 flex flex-col gap-3">
+                        <div class="p-3 bg-red-50 border-l-4 border-red-500 rounded-r-lg flex justify-between items-center hover:bg-red-100 transition cursor-pointer">
+                            <div>
+                                <h4 class="text-sm font-bold text-red-900">Unauthorized Access Attempt</h4>
+                                <p class="text-xs text-red-700 mt-1">Sector Alpha-4 Server Farm</p>
+                            </div>
+                            <span class="text-xs font-bold text-red-500">2m ago</span>
+                        </div>
+                        
+                        <div class="p-3 bg-yellow-50 border-l-4 border-yellow-500 rounded-r-lg flex justify-between items-center hover:bg-yellow-100 transition cursor-pointer">
+                            <div>
+                                <h4 class="text-sm font-bold text-yellow-900">Drone Array Offline</h4>
+                                <p class="text-xs text-yellow-700 mt-1">Maintenance required on DR-892</p>
+                            </div>
+                            <span class="text-xs font-bold text-yellow-600">14m ago</span>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full mt-4 bg-white border border-gray-200 text-gray-600 font-bold py-2 rounded-lg hover:bg-gray-50 transition text-sm shadow-sm">
+                        View All Alerts
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer inside main -->
+            <footer class="mt-12 text-center text-sm text-gray-400 py-4 border-t border-gray-200">
+                &copy; 2026 STACKLY Defense Systems. All secure rights reserved.
+            </footer>
+        </div>
+    </main>
+
+    <!-- Overlay for mobile sidebar -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
+
+    <script>
+        // Sidebar Toggle Logic
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('open-sidebar');
+        const closeBtn = document.getElementById('close-sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+
+        function toggleSidebar() {
+            const isClosed = sidebar.classList.contains('-translate-x-full');
+            if(isClosed) {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+            } else {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            }
+        }
+
+        openBtn.addEventListener('click', toggleSidebar);
+        closeBtn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+    </script>
+<script>document.addEventListener("DOMContentLoaded", () => { const name = localStorage.getItem("userName"); const email = localStorage.getItem("userEmail"); if(name && email) { const profileDiv = document.querySelector("aside .px-6.py-4 .flex.items-center.gap-3"); if(profileDiv) { const initials = name.substring(0,2).toUpperCase(); profileDiv.querySelector(".w-12.h-12").textContent = initials; profileDiv.querySelector("h3").textContent = name; profileDiv.querySelector("p").textContent = email; } } document.querySelectorAll("a").forEach(a => { if(!a.closest("#sidebar")) { a.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "404.html"; }); } }); document.querySelectorAll("button:not(#open-sidebar):not(#close-sidebar)").forEach(b => { if(!b.closest("#sidebar")) { b.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "404.html"; }); } }); document.querySelectorAll("form").forEach(f => { f.addEventListener("submit", (e) => { e.preventDefault(); window.location.href = "404.html"; }); }); });</script>
+<script src="js/dashboard-profile.js"></script>
+</body>
+</html>
+

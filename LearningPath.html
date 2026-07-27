@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STACKLY - Learning Path</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { padding: 160px 20px 80px !important; text-align: center !important; position: relative; }
+    .page-hero::before { background-image: url('asstes/Online_class.webp') !important; }
+    .page-hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+    
+    .path-card { display: flex; flex-wrap: wrap; background: var(--secondary); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 40px; border: 1px solid #eee; }
+    .path-card.reverse { flex-direction: row-reverse; }
+    .path-img { flex: 1; min-width: min(260px, 100%); min-height: 250px; display: flex; align-items: center; justify-content: center; font-size: 5rem; color: #fff; }
+    .path-content { flex: 1; min-width: min(260px, 100%); padding: 50px; display: flex; flex-direction: column; justify-content: center; }
+    .path-content h3 { font-size: 2rem; margin-bottom: 15px; color: var(--primary); }
+    .path-features { list-style: none; margin-top: 20px; }
+    .path-features li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; color: var(--text-light); }
+    .path-features li i { color: var(--primary); }
+    
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 30px; }
+    .feature-box { background: var(--secondary); padding: 40px 30px; border-radius: 20px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: var(--transition); }
+    .feature-box:hover { transform: translateY(-10px); }
+    .feature-box i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+    
+    .cta-banner { background: var(--accent); color: var(--secondary); padding: 80px 20px; text-align: center; border-radius: 20px; margin: 50px 0; }
+    @media (max-width: 768px) {
+      .path-content { padding: 30px 20px !important; }
+      .path-content h3 { font-size: 1.6rem; }
+      .feature-box { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader"><div class="loader-inner"></div></div>
+
+  <nav class="navbar">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <a href="index.html" class="nav-brand">
+        <img src="asstes/Brand-logo.webp" alt="STACKLY Logo" onerror="this.src='https://via.placeholder.com/150x50?text=STACKLY'">
+      </a>
+      <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="LearningPath.html" style="color: var(--primary)">Learning Path</a></li>
+        <li><a href="Community.html">Community</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li class="mobile-login"><a href="Login.html" class="btn btn-primary" style="display:inline-block; padding:8px 25px;">Login</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="Login.html" class="btn btn-primary">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 data-aos="fade-down">Choose Your Learning Journey</h1>
+      <p data-aos="fade-up" data-aos-delay="200" style="color:var(--text-light); max-width:600px; margin:0 auto;">Structured paths designed to take you from absolute beginner to fluent speaker efficiently.</p>
+    </div>
+  </section>
+
+  <!-- 2. Beginner Path -->
+  <section>
+    <div class="container">
+      <div class="path-card" data-aos="fade-up">
+        <div class="path-img" style="background: var(--primary); opacity: 0.8;"><i class="fa-solid fa-seedling"></i></div>
+        <div class="path-content">
+          <h3>Beginner Path</h3>
+          <p style="color:var(--text-light);">Start from scratch and build a solid foundation. Learn basic greetings, essential vocabulary, and simple sentence structures.</p>
+          <ul class="path-features">
+            <li><i class="fa-solid fa-check"></i> Alphabet & Phonics</li>
+            <li><i class="fa-solid fa-check"></i> Everyday Greetings</li>
+            <li><i class="fa-solid fa-check"></i> Basic Grammar</li>
+            <li><i class="fa-solid fa-check"></i> Numbers & Time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Intermediate Path -->
+  <section style="background: var(--bg-color); padding-top: 20px;">
+    <div class="container">
+      <div class="path-card reverse" data-aos="fade-up">
+        <div class="path-img" style="background: var(--accent);"><i class="fa-solid fa-layer-group"></i></div>
+        <div class="path-content">
+          <h3>Intermediate Path</h3>
+          <p style="color:var(--text-light);">Expand your vocabulary and master complex grammar. Hold meaningful conversations about various topics.</p>
+          <ul class="path-features">
+            <li><i class="fa-solid fa-check"></i> Conversational Fluency</li>
+            <li><i class="fa-solid fa-check"></i> Past & Future Tenses</li>
+            <li><i class="fa-solid fa-check"></i> Slang & Idioms</li>
+            <li><i class="fa-solid fa-check"></i> Travel Scenarios</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Advanced Path -->
+  <section style="padding-top: 20px;">
+    <div class="container">
+      <div class="path-card" data-aos="fade-up">
+        <div class="path-img" style="background: #1a1a1a;"><i class="fa-solid fa-medal"></i></div>
+        <div class="path-content">
+          <h3>Advanced Path</h3>
+          <p style="color:var(--text-light);">Achieve near-native fluency. Understand nuances, humor, and complex texts in professional and academic settings.</p>
+          <ul class="path-features">
+            <li><i class="fa-solid fa-check"></i> Business Terminology</li>
+            <li><i class="fa-solid fa-check"></i> Accent Reduction</li>
+            <li><i class="fa-solid fa-check"></i> Advanced Debates</li>
+            <li><i class="fa-solid fa-check"></i> Literature & Media</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. AI Practice Sessions & 6. Weekly Challenges (Combined visually in a grid) -->
+  <section style="background: var(--bg-color);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Supercharge Your Learning</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-box" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fa-solid fa-robot"></i>
+          <h4>AI Practice Sessions</h4>
+          <p style="color:var(--text-light); margin-top:10px;">Role-play real-world scenarios with our intelligent AI to build speaking confidence.</p>
+        </div>
+        <div class="feature-box" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fa-solid fa-trophy"></i>
+          <h4>Weekly Challenges</h4>
+          <p style="color:var(--text-light); margin-top:10px;">Compete with global learners in weekly quests to earn XP and rare badges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Progress Tracking -->
+  <section>
+    <div class="container" style="text-align:center;">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Detailed Progress Tracking</h2>
+      </div>
+      <div style="background:var(--secondary); padding:50px; border-radius:20px; box-shadow:0 10px 40px rgba(0,0,0,0.1); max-width:800px; margin:0 auto;" data-aos="flip-up">
+        <div style="display:flex; justify-content:space-around; flex-wrap:wrap; gap:30px;">
+          <div>
+            <div style="width:120px; height:120px; border-radius:50%; border:10px solid var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:bold; margin:0 auto 15px;">A2</div>
+            <p>Current Level</p>
+          </div>
+          <div>
+            <div style="width:120px; height:120px; border-radius:50%; border:10px solid var(--accent); display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:bold; margin:0 auto 15px;">14</div>
+            <p>Day Streak</p>
+          </div>
+          <div>
+            <div style="width:120px; height:120px; border-radius:50%; border:10px solid #FFB800; display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:bold; margin:0 auto 15px;">4.5k</div>
+            <p>XP Earned</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CTA -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-banner" data-aos="zoom-in">
+        <h2 style="color: var(--secondary);">Ready to pick your path?</h2>
+        <a href="404.html" class="btn btn-primary" style="margin-top:20px;">Get Started Free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col footer-logo">
+          <img src="asstes/Brand-logo.webp" alt="STACKLY Logo" onerror="this.src='https://via.placeholder.com/150x50?text=STACKLY'">
+          <p>Master languages smarter, faster, and better through AI-powered interactive learning.</p>
+          <div class="social-links">
+            <a href="404.html"><img src="asstes/footer-socialmedia-icon--facebook.webp" alt="Facebook" style="width:20px; height:20px; object-fit:contain;"></a>
+            <a href="404.html"><img src="asstes/footer-socialmedia-icon-twitter.webp" alt="Twitter" style="width:20px; height:20px; object-fit:contain;"></a>
+            <a href="404.html"><img src="asstes/footer-socialmedia-icon-instagram.webp" alt="Instagram" style="width:20px; height:20px; object-fit:contain;"></a>
+            <a href="404.html"><img src="asstes/footer-socialmedia-icon-linkedin.webp" alt="LinkedIn" style="width:20px; height:20px; object-fit:contain;"></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a href="LearningPath.html">Learning Path</a></li>
+            <li><a href="Community.html">Community</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="404.html">Help Center</a></li>
+            <li><a href="404.html">Terms of Service</a></li>
+            <li><a href="404.html">Privacy Policy</a></li>
+            <li><a href="404.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Languages</h3>
+          <ul>
+            <li><a href="404.html">Learn English</a></li>
+            <li><a href="404.html">Learn Spanish</a></li>
+            <li><a href="404.html">Learn French</a></li>
+            <li><a href="404.html">Learn Japanese</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STACKLY. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
