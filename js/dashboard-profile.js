@@ -17,14 +17,44 @@ document.addEventListener("DOMContentLoaded", () => {
           flex-wrap: wrap !important;
           max-width: 100% !important;
         }
-        /* CRITICAL: Ensure sidebar menus NEVER wrap icon and text onto separate lines */
-        aside a, #sidebar a, aside nav a, #sidebar nav a, aside .flex, #sidebar .flex {
+        /* CRITICAL: Center align user profile box in sidebar on mobile view */
+        aside .border-b, #sidebar .border-b {
+          text-align: center !important;
+          padding: 1.5rem 1rem !important;
+        }
+        aside .border-b > .flex, #sidebar .border-b > .flex {
+          flex-direction: column !important;
+          justify-content: center !important;
+          align-items: center !important;
+          text-align: center !important;
+          gap: 0.5rem !important;
+        }
+        aside .border-b h3, #sidebar .border-b h3 {
+          text-align: center !important;
+          font-size: 1rem !important;
+          margin-top: 0.25rem !important;
+          word-break: break-word !important;
+          white-space: normal !important;
+        }
+        aside .border-b p, #sidebar .border-b p {
+          text-align: center !important;
+          font-size: 0.75rem !important;
+          word-break: break-all !important;
+          white-space: normal !important;
+          max-width: 100% !important;
+          margin: 0 auto !important;
+          color: #d1d5db !important;
+        }
+        /* CRITICAL: Ensure sidebar navigation links NEVER wrap icon and text onto separate lines */
+        aside nav a, #sidebar nav a, aside a:not(.block), #sidebar a:not(.block) {
           flex-wrap: nowrap !important;
           white-space: nowrap !important;
           padding-left: 1.25rem !important;
           padding-right: 1.25rem !important;
           gap: 0.75rem !important;
           font-size: 0.92rem !important;
+          display: flex !important;
+          align-items: center !important;
         }
         /* Ensure input fields, search boxes, and dropdowns scale to screen width without cutting off */
         input[type='text'], input[type='search'], input[type='email'], select, textarea {
