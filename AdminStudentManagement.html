@@ -117,6 +117,137 @@
                     </table>
                 </div>
             </div>
+
+            <!-- Section 1: Student Growth & Retention Analytics -->
+            <div class="mt-8 bg-gradient-to-r from-blue-900 to-indigo-950 rounded-2xl p-6 text-white shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-500 text-white px-2.5 py-1 rounded-full"><i class="fas fa-users"></i> Platform Demographics</span>
+                        <h3 class="text-xl font-bold mt-2">Active Student Growth: 6,420 Total</h3>
+                        <p class="text-xs text-blue-200 mt-1">30-Day Cohort Retention Rate: 88.4% (+2.1% vs last month)</p>
+                    </div>
+                    <div class="flex gap-4 text-center">
+                        <div class="bg-white/10 p-3 rounded-xl border border-white/10">
+                            <span class="text-[10px] text-gray-300">Daily Active</span>
+                            <div class="text-lg font-bold text-green-400">4,120</div>
+                        </div>
+                        <div class="bg-white/10 p-3 rounded-xl border border-white/10">
+                            <span class="text-[10px] text-gray-300">New Today</span>
+                            <div class="text-lg font-bold text-yellow-400">+42</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: At-Risk & Inactive Student Re-engagement Queue -->
+            <div class="mt-8 bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
+                <div class="flex justify-between items-center mb-6 border-b pb-3">
+                    <h3 class="font-bold text-lg text-gray-900 flex items-center gap-2"><i class="fas fa-user-clock text-red-500 animate-pulse"></i> At-Risk Student Re-engagement Queue</h3>
+                    <span class="px-3 py-1 bg-red-50 text-red-700 font-bold text-xs rounded-full border border-red-100">3 Inactive > 14 Days</span>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-200/80 gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 font-bold flex items-center justify-center text-xs">DL</div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-900">David Lewis <span class="text-[10px] text-gray-400 font-normal">(david@example.com)</span></h4>
+                                <p class="text-[10px] text-red-500 font-semibold">Last login: 18 days ago &bull; Spanish A1 (20% complete)</p>
+                            </div>
+                        </div>
+                        <button class="bg-primary hover:bg-orange-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm flex items-center justify-center gap-2">
+                            <i class="fas fa-envelope"></i> Send Motivational Reminder
+                        </button>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-200/80 gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 text-primary font-bold flex items-center justify-center text-xs">EP</div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-900">Elena Perez <span class="text-[10px] text-gray-400 font-normal">(elena@example.com)</span></h4>
+                                <p class="text-[10px] text-orange-500 font-semibold">Last login: 15 days ago &bull; Japanese N5 (45% complete)</p>
+                            </div>
+                        </div>
+                        <button class="bg-primary hover:bg-orange-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm flex items-center justify-center gap-2">
+                            <i class="fas fa-envelope"></i> Send Motivational Reminder
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Student Scholarship & Financial Aid Requests -->
+            <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300 transform hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="font-bold text-gray-900 flex items-center gap-2"><i class="fas fa-hand-holding-heart text-green-500"></i> Financial Aid &amp; Scholarships</h3>
+                            <span class="text-xs font-bold text-green-700 bg-green-50 px-2.5 py-1 rounded-full">1 New Request</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4">Review applications for subsidized STACKLY Pro learning licenses.</p>
+                        <div class="p-3 bg-gray-50 rounded-xl border mb-4">
+                            <h4 class="text-xs font-bold text-gray-900">Applicant: Marcus Vance (University Student)</h4>
+                            <p class="text-[10px] text-gray-600 mt-1">&ldquo;Applying for 6-month Japanese N4 access for international exchange studies.&rdquo;</p>
+                            <span class="text-[10px] text-green-600 font-bold block mt-2">Eligibility Score: 95/100 (Verified Student ID)</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button class="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-xl text-xs transition">Approve Scholarship</button>
+                        <button class="px-4 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 rounded-xl text-xs transition">Review File</button>
+                    </div>
+                </div>
+
+                <!-- Section 4: Bulk Student Import / Export & CSV Tools -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300 transform hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="font-bold text-gray-900 flex items-center gap-2"><i class="fas fa-file-csv text-blue-500"></i> Bulk Student Data Operations</h3>
+                            <span class="text-xs font-bold text-gray-400">CSV / JSON</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4">Import classroom rosters in bulk or export grading reports for university accreditation.</p>
+                        <div class="border-2 border-dashed border-gray-200 rounded-xl p-6 text-center hover:border-primary transition cursor-pointer bg-gray-50/50 mb-4">
+                            <i class="fas fa-cloud-upload-alt text-2xl text-primary mb-1"></i>
+                            <p class="text-xs font-bold text-gray-700">Drag &amp; Drop Roster CSV Here</p>
+                            <span class="text-[10px] text-gray-400">Max file size: 10 MB (up to 5,000 students)</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between gap-2">
+                        <button class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-xl text-xs transition flex items-center justify-center gap-2"><i class="fas fa-file-export"></i> Export All Grades</button>
+                        <button class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2 rounded-xl text-xs transition flex items-center justify-center gap-2"><i class="fas fa-download"></i> Template</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Student Honor Roll & Top Achievers Spotlight -->
+            <div class="mt-8 bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-bold text-lg text-gray-900 flex items-center gap-2"><i class="fas fa-award text-yellow-500 animate-bounce"></i> Student Honor Roll &amp; Weekly Spotlight</h3>
+                    <span class="text-xs font-bold text-yellow-700 bg-yellow-50 px-3 py-1 rounded-full border border-yellow-200">Top 3 Platform Earners</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                    <div class="p-4 bg-gradient-to-b from-yellow-50 to-white rounded-xl border border-yellow-200 shadow-sm relative">
+                        <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-blue-950 text-[10px] font-extrabold px-3 py-0.5 rounded-full shadow">1ST PLACE</span>
+                        <img src="asstes/profile-michael.webp" alt="Top Student" class="w-14 h-14 rounded-full object-cover mx-auto mt-2 mb-2 border-2 border-yellow-400 shadow">
+                        <h4 class="font-bold text-gray-900 text-sm">Michael B.</h4>
+                        <span class="text-xs text-primary font-bold block">3,450 XP this week</span>
+                        <button class="mt-3 w-full bg-yellow-400 hover:bg-yellow-300 text-blue-950 font-bold py-1.5 rounded-lg text-[10px] transition shadow-sm"><i class="fas fa-gift"></i> Award Pro Month</button>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center text-lg mx-auto mb-2">SL</div>
+                        <h4 class="font-bold text-gray-900 text-sm">Sarah Lopez</h4>
+                        <span class="text-xs text-gray-600 font-bold block">2,890 XP this week</span>
+                        <button class="mt-3 w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-1.5 rounded-lg text-[10px] transition"><i class="fas fa-certificate"></i> Send Badge</button>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                        <div class="w-14 h-14 rounded-full bg-purple-100 text-purple-600 font-bold flex items-center justify-center text-lg mx-auto mb-2">KT</div>
+                        <h4 class="font-bold text-gray-900 text-sm">Kenji Tanaka</h4>
+                        <span class="text-xs text-gray-600 font-bold block">2,640 XP this week</span>
+                        <button class="mt-3 w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-1.5 rounded-lg text-[10px] transition"><i class="fas fa-certificate"></i> Send Badge</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer inside main -->
+            <footer class="mt-12 text-center text-sm text-gray-400 py-4 border-t border-gray-200">
+                &copy; 2026 STACKLY Learning Platform. All rights reserved.
+            </footer>
         </div>
     </main>
 

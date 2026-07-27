@@ -270,6 +270,150 @@
                 </div>
             </div>
 
+            <!-- Section 1: Daily Goal & XP Tracker Widget -->
+            <div class="mt-8 bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl p-6 text-white shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-3xl animate-bounce">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Daily XP Challenge Active!</h3>
+                            <p class="text-sm text-white/90 mt-1">Earn 150 more XP before midnight to unlock the Golden Polyglot Badge and 50 bonus gems.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-auto flex flex-col items-end">
+                        <div class="w-full md:w-48 bg-white/30 rounded-full h-3 mb-2">
+                            <div class="bg-white h-3 rounded-full transition-all duration-1000" style="width: 75%"></div>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider">350 / 500 XP (75%)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Recommended Next Lessons Grid -->
+            <div class="mt-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-bold text-gray-900 flex items-center gap-2"><i class="fas fa-magic text-primary animate-pulse"></i> AI-Curated Next Lessons</h3>
+                    <span class="text-xs font-bold text-primary bg-orange-50 px-3 py-1 rounded-full border border-orange-200">Personalized for You</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition duration-300 transform hover:-translate-y-1 flex flex-col justify-between">
+                        <div>
+                            <div class="h-32 rounded-xl overflow-hidden mb-4 relative">
+                                <img src="asstes/French_language_class.webp" alt="French Grammar" class="w-full h-full object-cover">
+                                <span class="absolute top-2 right-2 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded">15 MINS</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-1">French Subjunctive Mastery</h4>
+                            <p class="text-xs text-gray-500 mb-4">Master tricky verb conjugations with interactive voice drills.</p>
+                        </div>
+                        <button class="w-full bg-primary/10 text-primary font-bold py-2 rounded-xl hover:bg-primary hover:text-white transition text-sm">Start Lesson</button>
+                    </div>
+                    <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition duration-300 transform hover:-translate-y-1 flex flex-col justify-between">
+                        <div>
+                            <div class="h-32 rounded-xl overflow-hidden mb-4 relative">
+                                <img src="asstes/Japanese_learning_class.webp" alt="Japanese Kanji" class="w-full h-full object-cover">
+                                <span class="absolute top-2 right-2 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded">20 MINS</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-1">Kanji Radicals N4</h4>
+                            <p class="text-xs text-gray-500 mb-4">Learn 15 high-frequency compound characters with memory hooks.</p>
+                        </div>
+                        <button class="w-full bg-primary/10 text-primary font-bold py-2 rounded-xl hover:bg-primary hover:text-white transition text-sm">Start Lesson</button>
+                    </div>
+                    <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition duration-300 transform hover:-translate-y-1 flex flex-col justify-between">
+                        <div>
+                            <div class="h-32 rounded-xl overflow-hidden mb-4 relative">
+                                <img src="asstes/English_language_class.webp" alt="Business English" class="w-full h-full object-cover">
+                                <span class="absolute top-2 right-2 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded">10 MINS</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-1">Executive Negotiation Pitch</h4>
+                            <p class="text-xs text-gray-500 mb-4">Roleplay high-stakes business meetings with AI simulated clients.</p>
+                        </div>
+                        <button class="w-full bg-primary/10 text-primary font-bold py-2 rounded-xl hover:bg-primary hover:text-white transition text-sm">Start Lesson</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Live Class Schedule & Webinars -->
+            <div class="mt-8 bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 flex items-center gap-2"><i class="fas fa-video text-red-500 animate-pulse"></i> Today's Live Tutoring Sessions</h3>
+                        <p class="text-xs text-gray-500 mt-1">Join interactive group classrooms hosted by native speaking professors.</p>
+                    </div>
+                    <span class="inline-flex items-center gap-1 text-xs font-bold text-red-500 bg-red-50 px-3 py-1.5 rounded-full border border-red-100 self-start sm:self-auto">
+                        <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span> 2 Classes Live Now
+                    </span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-gray-50 rounded-xl border border-gray-200/60 gap-4 hover:border-primary transition">
+                        <div class="flex items-center gap-4">
+                            <img src="asstes/profile-michael.webp" alt="Instructor" class="w-12 h-12 rounded-full object-cover border-2 border-primary">
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Spanish Conversation Club: Slang & Idioms</h4>
+                                <p class="text-xs text-gray-500">Hosted by Prof. Michael B. &bull; <span class="text-green-600 font-semibold">In Progress (Started 15m ago)</span></p>
+                            </div>
+                        </div>
+                        <button class="bg-red-500 text-white font-bold px-5 py-2 rounded-xl hover:bg-red-600 transition shadow-sm text-xs flex items-center justify-center gap-2">
+                            <i class="fas fa-headset"></i> Join Room (18/25)
+                        </button>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-gray-50 rounded-xl border border-gray-200/60 gap-4 hover:border-primary transition">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-lg border-2 border-purple-200">YL</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Japanese Kanji Speed Drills & Q&amp;A</h4>
+                                <p class="text-xs text-gray-500">Hosted by Yuki Tanaka &bull; <span class="text-gray-500 font-semibold">Starts in 45 mins (4:00 PM)</span></p>
+                            </div>
+                        </div>
+                        <button class="bg-gray-200 text-gray-700 font-bold px-5 py-2 rounded-xl hover:bg-primary hover:text-white transition text-xs flex items-center justify-center gap-2">
+                            <i class="fas fa-bell"></i> Remind Me
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Community Discussion Highlights -->
+            <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-gray-900 flex items-center gap-2"><i class="fas fa-comments text-blue-500"></i> Trending Community Topic</h3>
+                        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full">Grammar Help</span>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-sm mb-2">"When do I use 'Por' vs 'Para' in complex Spanish sentences?"</h4>
+                    <p class="text-xs text-gray-600 line-clamp-2 mb-4">I always get confused when explaining time duration versus destination. Does anyone have a reliable mnemonic or trick to remember which one to pick?</p>
+                    <div class="flex items-center justify-between text-xs text-gray-400 border-t pt-3">
+                        <span class="flex items-center gap-2"><i class="fas fa-user-circle"></i> Posted by Alex M.</span>
+                        <div class="flex items-center gap-4">
+                            <span class="text-orange-500 font-bold flex items-center gap-1"><i class="fas fa-arrow-up"></i> 34</span>
+                            <span class="flex items-center gap-1"><i class="fas fa-reply"></i> 12 replies</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 5: Weekly Learning Insights & Achievement Badges -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-gray-900 flex items-center gap-2"><i class="fas fa-chart-pie text-purple-500"></i> Weekly Skill Breakdown</h3>
+                        <span class="text-xs font-bold text-green-600 bg-green-50 px-2.5 py-1 rounded-full">+12% vs last week</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold text-gray-600 mb-1"><span>Vocabulary Retention</span><span>88%</span></div>
+                            <div class="w-full bg-gray-100 rounded-full h-2"><div class="bg-purple-500 h-2 rounded-full" style="width: 88%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold text-gray-600 mb-1"><span>Speaking Fluency Score</span><span>92%</span></div>
+                            <div class="w-full bg-gray-100 rounded-full h-2"><div class="bg-green-500 h-2 rounded-full" style="width: 92%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold text-gray-600 mb-1"><span>Listening Speed (1.2x Normal)</span><span>76%</span></div>
+                            <div class="w-full bg-gray-100 rounded-full h-2"><div class="bg-blue-500 h-2 rounded-full" style="width: 76%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Footer inside main -->
             <footer class="mt-12 text-center text-sm text-gray-400 py-4 border-t border-gray-200">
                 &copy; 2026 STACKLY Learning Platform. All rights reserved.

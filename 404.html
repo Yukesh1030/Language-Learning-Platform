@@ -66,8 +66,8 @@
       </p>
       
       <div style="display: flex; gap: 20px; justify-content: center;">
-        <button onclick="history.back()" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Go Back</button>
-        <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-house"></i> Back to Home</a>
+        <button onclick="if(window.history.length > 1 && document.referrer) { window.history.back(); } else { window.location.href = 'index.html'; }" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Go Back</button>
+        <a href="index.html" onclick="window.location.href='index.html'; return false;" class="btn btn-primary"><i class="fa-solid fa-house"></i> Back to Home</a>
       </div>
     </div>
   </div>

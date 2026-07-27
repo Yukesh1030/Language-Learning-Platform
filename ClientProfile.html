@@ -77,6 +77,147 @@
                     <button type="submit" class="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 transition">Save Changes</button>
                 </form>
             </div>
+
+            <!-- Section 1: Target Languages & Learning Priorities -->
+            <div class="mt-8 bg-white rounded-2xl p-6 shadow-sm border border-gray-100 max-w-2xl hover:shadow-md transition duration-300">
+                <div class="flex justify-between items-center mb-4 border-b pb-3">
+                    <h3 class="font-bold text-lg text-gray-900 flex items-center gap-2"><i class="fas fa-language text-primary"></i> Active Target Languages</h3>
+                    <span class="text-xs font-bold text-primary bg-orange-50 px-3 py-1 rounded-full">3 Languages Active</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+                    <div class="p-4 rounded-xl border-2 border-primary bg-orange-50/40 flex flex-col justify-between relative overflow-hidden">
+                        <span class="absolute top-2 right-2 text-primary font-bold"><i class="fas fa-check-circle"></i></span>
+                        <div class="text-2xl font-bold text-gray-800 mb-1">🇪🇸 Spanish</div>
+                        <span class="text-xs font-semibold text-primary">Primary Focus &bull; B1 Level</span>
+                    </div>
+                    <div class="p-4 rounded-xl border border-gray-200 bg-gray-50 flex flex-col justify-between hover:border-primary transition">
+                        <div class="text-2xl font-bold text-gray-800 mb-1">🇯🇵 Japanese</div>
+                        <span class="text-xs font-semibold text-gray-500">Secondary &bull; N4 Level</span>
+                    </div>
+                    <div class="p-4 rounded-xl border border-gray-200 bg-gray-50 flex flex-col justify-between hover:border-primary transition">
+                        <div class="text-2xl font-bold text-gray-800 mb-1">🇫🇷 French</div>
+                        <span class="text-xs font-semibold text-gray-500">Casual &bull; A1 Beginner</span>
+                    </div>
+                </div>
+                <button class="w-full bg-gray-100 hover:bg-primary hover:text-white text-gray-700 font-bold py-2 rounded-xl transition text-xs flex items-center justify-center gap-2">
+                    <i class="fas fa-plus"></i> Add New Target Language
+                </button>
+            </div>
+
+            <!-- Section 2: Notification Preferences & Daily Reminders -->
+            <div class="mt-8 bg-white rounded-2xl p-6 shadow-sm border border-gray-100 max-w-2xl hover:shadow-md transition duration-300">
+                <h3 class="font-bold text-lg text-gray-900 mb-4 border-b pb-3 flex items-center gap-2"><i class="fas fa-bell text-yellow-500 animate-swing"></i> Notification Preferences</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-800">Daily Workout Alarm</h4>
+                            <p class="text-xs text-gray-500">Receive a push reminder to complete your streak before midnight.</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" value="" class="sr-only peer" checked>
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between border-t pt-3">
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-800">New Lesson &amp; Live Webinar Alerts</h4>
+                            <p class="text-xs text-gray-500">Get notified when instructors launch new courses or group rooms.</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" value="" class="sr-only peer" checked>
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between border-t pt-3">
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-800">Weekly Progress Email Reports</h4>
+                            <p class="text-xs text-gray-500">Summary of XP, vocabulary retention, and fluency charts sent to email.</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" value="" class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Account Security & Password Management -->
+            <div class="mt-8 bg-white rounded-2xl p-6 shadow-sm border border-gray-100 max-w-2xl hover:shadow-md transition duration-300">
+                <div class="flex justify-between items-center mb-4 border-b pb-3">
+                    <h3 class="font-bold text-lg text-gray-900 flex items-center gap-2"><i class="fas fa-shield-alt text-green-500"></i> Account Security &amp; 2FA</h3>
+                    <span class="text-xs font-bold text-green-700 bg-green-50 px-3 py-1 rounded-full"><i class="fas fa-lock"></i> Highly Secure</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl border">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-mobile-alt text-xl text-gray-600"></i>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-800">Two-Factor Authentication (SMS / Authenticator App)</h4>
+                                <p class="text-[10px] text-green-600 font-semibold">Enabled on device (+1 ***-***-9921)</p>
+                            </div>
+                        </div>
+                        <button class="text-xs font-bold text-red-500 hover:underline">Disable</button>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-800">Password &amp; Login Sessions</h4>
+                            <p class="text-xs text-gray-500">Last changed 45 days ago &bull; Active session: Windows 11 Chrome</p>
+                        </div>
+                        <button class="bg-gray-200 text-gray-800 font-bold px-4 py-2 rounded-xl hover:bg-gray-300 transition text-xs">Change Password</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Subscription & Payment Methods (STACKLY Pro) -->
+            <div class="mt-8 bg-gradient-to-r from-gray-900 to-blue-950 rounded-2xl p-6 text-white max-w-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-orange-500 text-white px-2 py-0.5 rounded">STACKLY PRO MEMBER</span>
+                        <h3 class="text-xl font-bold mt-1">Unlimited AI Speech &amp; All Courses</h3>
+                        <p class="text-xs text-gray-300 mt-1">Next billing date: November 14, 2026 ($14.99/month)</p>
+                    </div>
+                    <span class="text-2xl font-bold text-yellow-400"><i class="fas fa-crown animate-bounce"></i></span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-white/10 text-xs">
+                    <span class="text-gray-300 flex items-center gap-2"><i class="far fa-credit-card"></i> Visa ending in 4242</span>
+                    <div class="flex gap-3 font-bold">
+                        <button class="hover:text-yellow-400 transition">Update Card</button>
+                        <button class="text-red-400 hover:underline">Cancel Pro</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Connected Social & Learning Apps -->
+            <div class="mt-8 bg-white rounded-2xl p-6 shadow-sm border border-gray-100 max-w-2xl hover:shadow-md transition duration-300">
+                <h3 class="font-bold text-lg text-gray-900 mb-4 border-b pb-3 flex items-center gap-2"><i class="fas fa-plug text-purple-500"></i> Connected Integrations</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-3 bg-gray-50 rounded-xl border flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-discord text-2xl text-indigo-500"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-gray-800">Discord Study Groups</h4>
+                                <span class="text-[10px] text-green-600 font-bold">Connected</span>
+                            </div>
+                        </div>
+                        <button class="text-[10px] text-gray-400 hover:text-red-500"><i class="fas fa-unlink"></i></button>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-xl border flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-google text-2xl text-red-500"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-gray-800">Google Calendar Sync</h4>
+                                <span class="text-[10px] text-green-600 font-bold">Connected</span>
+                            </div>
+                        </div>
+                        <button class="text-[10px] text-gray-400 hover:text-red-500"><i class="fas fa-unlink"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer inside main -->
+            <footer class="mt-12 text-center text-sm text-gray-400 py-4 border-t border-gray-200">
+                &copy; 2026 STACKLY Learning Platform. All rights reserved.
+            </footer>
         </div>
     </main>
     <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
