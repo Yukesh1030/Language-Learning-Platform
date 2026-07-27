@@ -11,14 +11,20 @@ document.addEventListener("DOMContentLoaded", () => {
           max-width: 100vw !important;
         }
         /* Make flex headers, search bars, banners, and card controls wrap neatly on mobile */
-        .flex.items-center.justify-between, 
-        .flex.items-center.gap-2, 
-        .flex.items-center.gap-3, 
-        .flex.items-center.gap-4,
-        .flex.justify-between,
-        .flex.gap-2, .flex.gap-3, .flex.gap-4, .flex.gap-6 {
+        main .flex.items-center.justify-between, 
+        main .flex.justify-between,
+        main .flex.gap-6 {
           flex-wrap: wrap !important;
           max-width: 100% !important;
+        }
+        /* CRITICAL: Ensure sidebar menus NEVER wrap icon and text onto separate lines */
+        aside a, #sidebar a, aside nav a, #sidebar nav a, aside .flex, #sidebar .flex {
+          flex-wrap: nowrap !important;
+          white-space: nowrap !important;
+          padding-left: 1.25rem !important;
+          padding-right: 1.25rem !important;
+          gap: 0.75rem !important;
+          font-size: 0.92rem !important;
         }
         /* Ensure input fields, search boxes, and dropdowns scale to screen width without cutting off */
         input[type='text'], input[type='search'], input[type='email'], select, textarea {
@@ -37,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
           text-align: center !important;
         }
         /* Ensure buttons inside flex rows don't get squished */
-        button, .btn, a.bg-primary, a.bg-accent, button.bg-primary, button.bg-yellow-400 {
+        main button, main .btn {
           white-space: normal !important;
           word-break: break-word !important;
         }
