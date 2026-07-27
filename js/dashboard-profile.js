@@ -1,5 +1,67 @@
 // Dynamic User Profile Management for Client and Admin Dashboards
 document.addEventListener("DOMContentLoaded", () => {
+  // 0. Inject Global Mobile Responsiveness Styles for all Dashboard Pages
+  if (!document.getElementById("mobile-responsive-dashboard-styles")) {
+    const styleEl = document.createElement("style");
+    styleEl.id = "mobile-responsive-dashboard-styles";
+    styleEl.innerHTML = `
+      @media (max-width: 768px) {
+        body, html, main {
+          overflow-x: hidden !important;
+          max-width: 100vw !important;
+        }
+        /* Make flex headers, search bars, banners, and card controls wrap neatly on mobile */
+        .flex.items-center.justify-between, 
+        .flex.items-center.gap-2, 
+        .flex.items-center.gap-3, 
+        .flex.items-center.gap-4,
+        .flex.justify-between,
+        .flex.gap-2, .flex.gap-3, .flex.gap-4, .flex.gap-6 {
+          flex-wrap: wrap !important;
+          max-width: 100% !important;
+        }
+        /* Ensure input fields, search boxes, and dropdowns scale to screen width without cutting off */
+        input[type='text'], input[type='search'], input[type='email'], select, textarea {
+          max-width: 100% !important;
+        }
+        /* Fix banner generators (e.g., 10-Week Syllabus Auto-Generator, Instant Quiz Generator) */
+        .bg-gradient-to-r input, .bg-gradient-to-br input,
+        .bg-gradient-to-r select, .bg-gradient-to-br select,
+        .bg-gradient-to-r button, .bg-gradient-to-br button,
+        .bg-gradient-to-r a, .bg-gradient-to-br a,
+        .bg-gradient-to-r .relative, .bg-gradient-to-br .relative {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin-top: 6px !important;
+          justify-content: center !important;
+          text-align: center !important;
+        }
+        /* Ensure buttons inside flex rows don't get squished */
+        button, .btn, a.bg-primary, a.bg-accent, button.bg-primary, button.bg-yellow-400 {
+          white-space: normal !important;
+          word-break: break-word !important;
+        }
+        /* Make tables horizontally scrollable without breaking page layout */
+        table, .overflow-x-auto {
+          display: block !important;
+          width: 100% !important;
+          overflow-x: auto !important;
+          -webkit-overflow-scrolling: touch !important;
+        }
+        /* Adjust headings and badges so long titles don't push badges off-screen */
+        h1 { font-size: 1.45rem !important; line-height: 1.3 !important; }
+        h2 { font-size: 1.3rem !important; line-height: 1.3 !important; }
+        h3 { font-size: 1.15rem !important; line-height: 1.3 !important; }
+        .rounded-full, .rounded-lg, .rounded-xl {
+          max-width: 100% !important;
+          word-break: break-word !important;
+          text-align: center !important;
+        }
+      }
+    `;
+    document.head.appendChild(styleEl);
+  }
+
   const isAdminPage = window.location.pathname.toLowerCase().includes("admin") || 
                       document.title.toLowerCase().includes("admin") ||
                       localStorage.getItem("userRole") === "Admin";

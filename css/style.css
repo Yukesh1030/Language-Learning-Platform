@@ -433,11 +433,14 @@ footer {
     padding-bottom: 60px !important;
     text-align: center !important;
   }
+  .hero .hero-content,
+  .hero .hero-visual,
+  .page-hero .hero-content,
   .page-hero h1,
-  .page-hero p,
-  .hero-content,
-  .hero-visual {
+  .page-hero p {
     animation: floatHeroMobile 3.5s ease-in-out infinite !important;
+    backface-visibility: hidden !important;
+    -webkit-font-smoothing: antialiased !important;
   }
   .hero::before,
   .page-hero::before {
@@ -447,7 +450,43 @@ footer {
     text-align: center !important;
   }
   .hero-buttons {
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+    align-items: center !important;
+  }
+  .hero-buttons .btn {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
     justify-content: center !important;
+  }
+  .hero form, .page-hero form {
+    display: flex !important;
+    flex-direction: column !important;
+    border-radius: 20px !important;
+    padding: 12px !important;
+    gap: 12px !important;
+    width: 100% !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    background: #ffffff !important;
+  }
+  .hero form input, .page-hero form input {
+    width: 100% !important;
+    padding: 14px 16px !important;
+    font-size: 0.95rem !important;
+    text-align: center !important;
+    border-radius: 12px !important;
+    background: #f8f9fa !important;
+  }
+  .hero form button, .page-hero form button {
+    width: 100% !important;
+    border-radius: 12px !important;
+    padding: 14px !important;
+    justify-content: center !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
   }
   footer {
     padding: 50px 0 20px !important;
@@ -468,6 +507,73 @@ footer {
   .contact-split,
   .path-card {
     flex-direction: column !important;
+  }
+  .journey-timeline {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding: 10px 0 !important;
+  }
+  .timeline-step {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 20px !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    padding: 18px 22px !important;
+    border-radius: 18px !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05) !important;
+    border: 1px solid #f0f0f0 !important;
+  }
+  .step-icon {
+    margin: 0 !important;
+    width: 58px !important;
+    height: 58px !important;
+    font-size: 1.5rem !important;
+    flex-shrink: 0 !important;
+  }
+  .timeline-step h4 {
+    font-size: 1.1rem !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
+  }
+  .mobile-split {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    gap: 40px !important;
+    text-align: center !important;
+  }
+  .mobile-split ul {
+    padding: 0 !important;
+    margin: 20px 0 0 !important;
+  }
+  .mobile-split ul li {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 16px !important;
+    background: #ffffff !important;
+    padding: 18px !important;
+    border-radius: 18px !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05) !important;
+    border: 1px solid #f0f0f0 !important;
+    margin-bottom: 16px !important;
+  }
+  .mobile-split ul li h4 {
+    font-size: 1.1rem !important;
+    margin-bottom: 6px !important;
+    color: var(--text-dark) !important;
+  }
+  .mobile-split ul li p {
+    font-size: 0.9rem !important;
+    color: var(--text-light) !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
   }
 }
 
