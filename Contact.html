@@ -13,7 +13,10 @@
   <link rel="stylesheet" href="css/style.css">
   <style>
     .page-hero { padding: 160px 20px 80px !important; text-align: center !important; position: relative; }
-    .page-hero::before { background-image: url('asstes/Live_classes.webp') !important; }
+    .page-hero::before {
+      background-image: none !important;
+      background-color: #000 !important;
+    }
     .page-hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
     
     .contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 50px; }
@@ -79,7 +82,7 @@
   </section>
 
   <!-- 2. Contact Cards -->
-  <section style="padding-top: 0;">
+  <section style="padding-top: 0.4;">
     <div class="container">
       <div class="contact-cards">
         <div class="contact-card" data-aos="zoom-in" data-aos-delay="100">
